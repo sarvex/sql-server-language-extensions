@@ -39,7 +39,7 @@ del boost_%BOOST_VERSION_IN_UNDERSCORE%.zip
 pushd %PACKAGES_ROOT%\boost_%BOOST_VERSION_IN_UNDERSCORE%
 
 CALL bootstrap.bat
-b2.exe -j12
+b2.exe -j12 --with-python
 
 REM If building in pipeline, set the PYTHONHOME here to overwrite the existing PYTHONHOME
 REM
